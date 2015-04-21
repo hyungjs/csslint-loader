@@ -40,8 +40,12 @@ function lint(input, options, webpack, callback) {
 
     var output = formatter(report.messages, webpack.resourcePath);
 
-    if (output.errors || (options.failOnWarning == true && output.warnings)) {
+    if (output.errors || (options.failWarning == true && output.warnings)) {
       webpack.emitError(output.message);
+
+      if (options.failOnError) {
+        throw new Error("Module failed because of a csslint error.");
+      }
     } else if (output.warnings) {
       webpack.emitWarning(output.message);
     }
@@ -62,7 +66,8 @@ module.exports = function(input) {
   var options = assign(
     {
       configFile: './.csslintrc',
-      failOnWarning: true
+      failOnError: true,
+      failWarning: true
     },
     loaderUtils.parseQuery(this.query)
   );
