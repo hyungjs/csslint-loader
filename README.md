@@ -20,7 +20,7 @@ module.exports = {
         loader: "style?css!csslint")
       },
       {
-        scss: /\.scsss$/,
+        scss: /\.scss$/,
         loader: ExtractTextPlugin.extract("style", "css!postcss!csslint!sass")
       }
     ]
