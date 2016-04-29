@@ -17,7 +17,7 @@ module.exports = {
     loaders: [
       {
         css: /\.css$/,
-        loader: "style?css!csslint")
+        loader: "style?css!csslint"
       },
       {
         scss: /\.scsss$/,
