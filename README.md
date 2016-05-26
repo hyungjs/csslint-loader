@@ -40,7 +40,7 @@ Pass in the location/name of file if different
 loader: "style?css?csslint?configFile=./config/cs"
 ```
 
-- failWarning (default: true)  
+- failOnWarning (default: true)  
 If you don't pass in any config file, csslint's default setting sets all rules to 1 (warning)  
 Forcing an error by default on warnings. Can disable by passing false as value
 
