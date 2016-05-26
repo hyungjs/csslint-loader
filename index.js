@@ -40,7 +40,7 @@ function lint(input, options, webpack, callback) {
 
     var output = formatter(report.messages, webpack.resourcePath);
 
-    if (output.errors || (options.failWarning == true && output.warnings)) {
+    if (output.errors || (options.failOnWarning == true && output.warnings)) {
       webpack.emitError(output.message);
 
       if (options.failOnError) {
@@ -67,7 +67,7 @@ module.exports = function(input) {
     {
       configFile: './.csslintrc',
       failOnError: true,
-      failWarning: true
+      failOnWarning: true
     },
     loaderUtils.parseQuery(this.query)
   );
