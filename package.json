@@ -18,7 +18,7 @@
   "author": "Hyung Suh",
   "license": "MIT",
   "peerDependencies": {
-    "csslint": "^0.10.0"
+    "csslint": "^1.0.0"
   },
   "dependencies": {
     "chalk": "^1.0.0",
@@ -28,7 +28,7 @@
     "text-table": "^0.2.0"
   },
   "devDependencies": {
-    "csslint": "^0.10.0"
+    "csslint": "1.0.0"
   },
   "bugs": {
     "url": "https://github.com/hyungjs/csslint-loader/issues"
